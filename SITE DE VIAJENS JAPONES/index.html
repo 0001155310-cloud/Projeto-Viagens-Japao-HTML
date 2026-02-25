@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore o Japão</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Menu */
+        nav {
+            background-color: #c40000;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+        }
+
+        /* Galeria */
+        .galeria {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .galeria img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Área de Compra */
+        .compra {
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .compra input, .compra select {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+
+        .compra button {
+            padding: 10px 20px;
+            background-color: #c40000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .compra button:hover {
+            background-color: #900000;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu -->
+    <nav>
+        <a href="#">Início</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#comprar">Comprar Passagens</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Explore o Japão 🇯🇵</h1>
+        <p>Descubra os melhores destinos para sua próxima viagem!</p>
+    </header>
+
+    <!-- Galeria -->
+    <section id="destinos">
+        <h2 style="text-align:center;">Destinos Populares</h2>
+        <div class="galeria">
+            <img src="https://source.unsplash.com/300x200/?tokyo" alt="Tóquio">
+            <img src="https://source.unsplash.com/300x200/?kyoto" alt="Kyoto">
+            <img src="https://source.unsplash.com/300x200/?mount-fuji" alt="Monte Fuji">
+            <img src="https://source.unsplash.com/300x200/?osaka" alt="Osaka">
+        </div>
+    </section>
+
+    <!-- Área de Compra -->
+    <section class="compra" id="comprar">
+        <h2>Compre sua Passagem</h2>
+        <form>
+            <input type="text" placeholder="Nome Completo" required><br>
+            <input type="email" placeholder="Email" required><br>
+            
+            <select required>
+                <option value="">Escolha o Destino</option>
+                <option>Tóquio</option>
+                <option>Kyoto</option>
+                <option>Monte Fuji</option>
+                <option>Osaka</option>
+            </select><br>
+
+            <input type="date" required><br>
+
+            <button type="submit">Comprar Passagem</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato">
+        <p>© 2026 - Site desenvolvido por Seu Nome</p>
+        <p>Projeto acadêmico - Viagens para o Japão</p>
+    </footer>
+
+</body>
+</html>
