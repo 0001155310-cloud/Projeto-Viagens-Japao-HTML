@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="Toquio.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Conheça Tóquio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Menu */
+        nav {
+            background-color: #c40000;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Banner */
+        .banner {
+            width: 100%;
+            height: 350px;
+            background-image: url('https://i.imgur.com/ySjiDXQ.jpg');
+            /* Use a URL da imagem compartilhada */
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* Conteúdo principal */
+        main {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        main h2 {
+            color: #c40000;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+            border-bottom: 3px solid #c40000;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .card {
+            width: 320px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-body h3 {
+            margin: 0 0 10px;
+            color: #c40000;
+        }
+
+        .card-body p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .card {
+                width: 90vw;
+            }
+
+            .banner {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Início</a>
+        <a href="#pontos">Pontos Turísticos</a>
+        <a href="#">Comprar Passagens</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Banner -->
+    <div class="banner"></div>
+
+    <!-- Conteúdo principal -->
+    <main id="pontos">
+        <h2>Pontos Turísticos de Tóquio</h2>
+        <div class="galeria">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Tokyo_Tower_and_Skytree_2015.jpg/320px-Tokyo_Tower_and_Skytree_2015.jpg" alt="Tokyo Tower" />
+                <div class="card-body">
+                    <h3>Tokyo Tower</h3>
+                    <p>Ícone de Tóquio, uma torre de observação com vista panorâmica incrível da cidade.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Sensoji_Temple_in_Asakusa%2C_Tokyo%2C_Japan_07.jpg/320px-Sensoji_Temple_in_Asakusa%2C_Tokyo%2C_Japan_07.jpg" alt="Templo Senso-ji" />
+                <div class="card-body">
+                    <h3>Templo Senso-ji</h3>
+                    <p>O templo budista mais antigo de Tóquio, famoso por sua arquitetura e atmosfera tradicional.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Shibuya_Crossing_2019.jpg/320px-Shibuya_Crossing_2019.jpg" alt="Shibuya Crossing" />
+                <div class="card-body">
+                    <h3>Shibuya Crossing</h3>
+                    <p>A movimentada e famosa faixa de pedestres, símbolo da energia urbana de Tóquio.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Meiji_Shrine_Tokyo_04_2012.jpg/320px-Meiji_Shrine_Tokyo_04_2012.jpg" alt="Santuário Meiji" />
+                <div class="card-body">
+                    <h3>Santuário Meiji</h3>
+                    <p>Um oásis de tranquilidade no meio da cidade, dedicado ao imperador Meiji e sua esposa.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ueno_Park_in_Tokyo_07_2013.jpg/320px-Ueno_Park_in_Tokyo_07_2013.jpg" alt="Parque Ueno" />
+                <div class="card-body">
+                    <h3>Parque Ueno</h3>
+                    <p>Parque grande com museus, zoológico e belas áreas para apreciar a natureza e eventos sazonais.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Akihabara_Street_2015.jpg/320px-Akihabara_Street_2015.jpg" alt="Akihabara" />
+                <div class="card-body">
+                    <h3>Akihabara</h3>
+                    <p>Bairro famoso por eletrônicos, cultura otaku, animes e mangás.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="contato">
+        <p>© 2026 - Site desenvolvido por Markos Samuell e Ryan Lucas</p>
+        <p>Projeto acadêmico - Viagens para o Japão</p>
+        <p>Instituição Senai CTTI-MG</p>
+    </footer>
+
+</body>
+</html>

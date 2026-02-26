@@ -1,0 +1,8 @@
+.banner {
+    width: 100%;                   /* ocupa toda largura da página */
+    height: 350px;                 /* altura do banner, ajuste como quiser */
+    background-image: url('Imagens/Toquio.png');  /* caminho da imagem */
+    background-position: center;   /* centraliza a imagem */
+    background-size: cover;        /* cobre toda a área, mantendo proporção */
+    background-repeat: no-repeat;  /* não repete a imagem */
+}

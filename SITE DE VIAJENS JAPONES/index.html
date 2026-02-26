@@ -1,195 +1,164 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sakura Travel - Journey's Gate</title>
+    <title>Explore o Japão</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            /* traditional dark background with the requested image */
-            background: url('https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/11D93/production/_121270137_gettyimages-584047706.jpg.webp') no-repeat center center/cover;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            position: relative;
-            overflow: hidden;
+            background-color: #f4f4f4;
         }
 
-        .container {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            max-width: 1000px;
-            padding: 20px;
-        }
-
-        .logo-section {
-            text-align: left;
-        }
-
-        .logo {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-    
-        .login-box {
-            background-color: rgba(0,0,0,0.75);
-            border: 4px solid #d44040;
-            padding: 40px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 380px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-        }
-
-        .login-box h1 {
+        /* Menu */
+        nav {
+            background-color: #c40000;
+            padding: 15px;
             text-align: center;
-            color: #ffffff;
-            font-size: 24px;
-            margin-bottom: 10px;
-            font-weight: bold;
         }
 
-        .login-box h2 {
-            text-align: center;
-            color: #ffffff;
-            font-size: 18px;
-            margin-bottom: 30px;
-            font-weight: normal;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            color: #ffffff;
-            font-size: 13px;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 4px;
-            font-size: 14px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        .form-group input::placeholder {
-            color: #ccc;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-            justify-content: center;
-        }
-
-        .btn {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn-login {
-            background-color: #d44040;
+        nav a {
             color: white;
-            flex: 1;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
         }
 
-        .btn-login:hover {
-            background-color: #a22a2a;
-            transform: scale(1.05);
+        nav a:hover {
+            text-decoration: underline;
         }
 
-        .btn-register {
-            background-color: #c9a04b;
-            color: #111;
-            flex: 1;
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: white;
         }
 
-        .btn-register:hover {
-            background-color: #a8893c;
-            transform: scale(1.05);
-        }
-
-        .bottom-text {
+        /* Galeria */
+        .galeria {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-            font-size: 12px;
-            color: #ffffff;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 30px;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                gap: 30px;
-            }
+        .galeria img {
+            width: 350px;
+            height: 230px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
 
-            .logo-section {
-                text-align: center;
-            }
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
 
-            .login-box {
-                max-width: 100%;
-            }
+        /* Seção Motivos */
+        .motivos {
+            background-color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .motivos h2 {
+            font-size: 32px;
+            color: #c40000;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #c40000;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .motivos p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo-section">
-            <div class="logo" style="text-align: center; color: #000; border: 3px solid #d44040; border-radius: 10px; background-color: #ffffff81; font-family: verdana; padding: 10px;"><strong>Sakura Travel</strong></div>
+
+    <!-- Menu -->
+    <nav>
+        <a href="#">Início</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#">Comprar Passagens</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Explore o Japão 🎌</h1>
+        <p>Descubra os melhores destinos para sua próxima viagem!</p>
+    </header>
+
+    <div class="galeria">
+
+        <div class="card">
+            <img src="imagens/Toquio.png" alt="Tóquio">
+            <div class="overlay">Tóquio</div>
         </div>
 
-        <div class="login-box">
-            <h1>Bem-Vindo(a)</h1>
-            <h2>Login</h2>
-
-            <form>
-                <div class="form-group">
-                    <label>Nome de Usuário</label>
-                    <input type="text" placeholder="" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Senha</label>
-                    <input type="password" placeholder="" required>
-                </div>
-
-                <div class="button-group">
-                    <button type="button" class="btn btn-login">LOGIN</button>
-                    <button type="button" class="btn btn-register">REGISTER</button>
-                </div>
-            </form>
-
-            <div class="bottom-text">
-                <span>© 2026 Sakura Travel</span>
-            </div>
+        <div class="card">
+            <img src="Imagens/Kyoto.jpg" alt="Kyoto">
+            <div class="overlay">Kyoto</div>
         </div>
+
+        <div class="card">
+            <img src="Imagens/Monte fuji.jpg" alt="Monte Fuji">
+            <div class="overlay">Monte Fuji</div>
+        </div>
+
+        <div class="card">
+            <img src="Imagens/Osaka.jpg" alt="Osaka">
+            <div class="overlay">Osaka</div>
+        </div>
+
+        <div class="card">
+            <img src="Imagens/Kanazawa.jpg" alt="Kanazawa">
+            <div class="overlay">Kanazawa</div>
+        </div>
+
+        <div class="card">
+            <img src="Imagens/Takayama.jpg" alt="Takayama">
+            <div class="overlay">Takayama</div>
+        </div>
+
     </div>
+
+    <!-- Seção Motivos -->
+    <section class="motivos">
+        <h2>Por que visitar o Japão?</h2>
+        <p>
+            O Japão é um país que une tradição milenar e tecnologia futurista como nenhum outro lugar no mundo.
+            Dos templos históricos de Kyoto aos arranha-céus iluminados de Tóquio, cada região oferece uma experiência única.
+            A culinária japonesa é reconhecida mundialmente, a segurança é exemplar e a cultura local encanta
+            pela organização, respeito e hospitalidade. Além disso, o país oferece paisagens naturais
+            impressionantes, como montanhas, praias e florestas que mudam completamente a cada estação do ano.
+            Visitar o Japão é mergulhar em uma cultura rica, diversa e inesquecível.
+        </p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato">
+        <p>© 2026 - Site desenvolvido por Markos Samuell e Ryan Lucas</p>
+        <p>Projeto acadêmico - Viagens para o Japão</p>
+        <p>Instituição Senai CTTI-MG</p>
+    </footer>
+
 </body>
 </html>
