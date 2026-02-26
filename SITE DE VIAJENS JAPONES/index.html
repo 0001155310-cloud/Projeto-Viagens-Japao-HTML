@@ -1,144 +1,195 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Explore o Japão</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Travel - Journey's Gate</title>
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        /* Menu */
-        nav {
-            background-color: #c40000;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        header {
-            text-align: center;
-            padding: 30px;
-            background-color: white;
-        }
-
-        /* Galeria */
-        .galeria {
+            /* traditional dark background with the requested image */
+            background: url('https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/11D93/production/_121270137_gettyimages-584047706.jpg.webp') no-repeat center center/cover;
+            color: #fff;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            max-width: 1000px;
             padding: 20px;
         }
 
-        .galeria img {
-            width: 300px;
-            height: 200px;
+        .logo-section {
+            text-align: left;
+        }
+
+        .logo {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+    
+        .login-box {
+            background-color: rgba(0,0,0,0.75);
+            border: 4px solid #d44040;
+            padding: 40px;
             border-radius: 10px;
-            object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
         }
 
-        /* Área de Compra */
-        .compra {
-            background-color: white;
-            padding: 30px;
+        .login-box h1 {
             text-align: center;
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
 
-        .compra input, .compra select {
-            padding: 10px;
-            margin: 10px;
-            width: 200px;
+        .login-box h2 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 30px;
+            font-weight: normal;
         }
 
-        .compra button {
-            padding: 10px 20px;
-            background-color: #c40000;
-            color: white;
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #ffffff;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
             border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .form-group input::placeholder {
+            color: #ccc;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
             cursor: pointer;
-            border-radius: 5px;
+            transition: all 0.3s ease;
         }
 
-        .compra button:hover {
-            background-color: #900000;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: #222;
+        .btn-login {
+            background-color: #d44040;
             color: white;
-            text-align: center;
-            padding: 15px;
+            flex: 1;
+        }
+
+        .btn-login:hover {
+            background-color: #a22a2a;
+            transform: scale(1.05);
+        }
+
+        .btn-register {
+            background-color: #c9a04b;
+            color: #111;
+            flex: 1;
+        }
+
+        .btn-register:hover {
+            background-color: #a8893c;
+            transform: scale(1.05);
+        }
+
+        .bottom-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .logo-section {
+                text-align: center;
+            }
+
+            .login-box {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Menu -->
-    <nav>
-        <a href="#">Início</a>
-        <a href="#destinos">Destinos</a>
-        <a href="#comprar">Comprar Passagens</a>
-        <a href="#contato">Contato</a>
-    </nav>
-
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Explore o Japão 🇯🇵</h1>
-        <p>Descubra os melhores destinos para sua próxima viagem!</p>
-    </header>
-
-    <!-- Galeria -->
-    <section id="destinos">
-        <h2 style="text-align:center;">Destinos Populares</h2>
-        <div class="galeria">
-            <img src="https://source.unsplash.com/300x200/?tokyo" alt="Tóquio">
-            <img src="https://source.unsplash.com/300x200/?kyoto" alt="Kyoto">
-            <img src="https://source.unsplash.com/300x200/?mount-fuji" alt="Monte Fuji">
-            <img src="https://source.unsplash.com/300x200/?osaka" alt="Osaka">
+    <div class="container">
+        <div class="logo-section">
+            <div class="logo" style="text-align: center; color: #000; border: 3px solid #d44040; border-radius: 10px; background-color: #ffffff81; font-family: verdana; padding: 10px;"><strong>Sakura Travel</strong></div>
         </div>
-    </section>
 
-    <!-- Área de Compra -->
-    <section class="compra" id="comprar">
-        <h2>Compre sua Passagem</h2>
-        <form>
-            <input type="text" placeholder="Nome Completo" required><br>
-            <input type="email" placeholder="Email" required><br>
-            
-            <select required>
-                <option value="">Escolha o Destino</option>
-                <option>Tóquio</option>
-                <option>Kyoto</option>
-                <option>Monte Fuji</option>
-                <option>Osaka</option>
-            </select><br>
+        <div class="login-box">
+            <h1>Bem-Vindo(a)</h1>
+            <h2>Login</h2>
 
-            <input type="date" required><br>
+            <form>
+                <div class="form-group">
+                    <label>Nome de Usuário</label>
+                    <input type="text" placeholder="" required>
+                </div>
 
-            <button type="submit">Comprar Passagem</button>
-        </form>
-    </section>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" placeholder="" required>
+                </div>
 
-    <!-- Rodapé -->
-    <footer id="contato">
-        <p>© 2026 - Site desenvolvido por Seu Nome</p>
-        <p>Projeto acadêmico - Viagens para o Japão</p>
-    </footer>
+                <div class="button-group">
+                    <button type="button" class="btn btn-login">LOGIN</button>
+                    <button type="button" class="btn btn-register">REGISTER</button>
+                </div>
+            </form>
 
+            <div class="bottom-text">
+                <span>© 2026 Sakura Travel</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
